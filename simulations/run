@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/projectgroup5 -n .:../src $*
+# for shared lib, use: opp_run -l ../src/projectgroup5 -n .:../src $*
