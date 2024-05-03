@@ -1,25 +1,10 @@
 # Epidemic Broadcast - OMNeT++ Project
 
-## Problem Description
+University project for "Performance Evaluation of Computer Systems and Networks" course (MSc Computer Engineering @ University of Pisa).
 
-Consider a **2D floorplan** with **N** users **randomly** dropped in it. A random user within
-the floorplan produces a message, which should ideally reach all the users as soon as possible.
+## Overview
 
-Communications are **slotted**, meaning that on each slot a user may or may not relay the
-message, and a message occupies an entire slot. A **broadcast radius R** is defined, so
-that every receiver who is within a radius R from the transmitter will receive the message,
-and no other user will hear it. A user that receives more than one message in the same
-slot will not be able to decode it (**collision**).
-
-Users relay the message they receive once, according to the following policy (**trickle relaying**): after the user successfully receives a message, it waits for a time window of
-T slots. If during that time window it correctly receives less than m copies of the
-same message, it **relays** it, otherwise it **stops**. A sender does not know (or cares about)
-whether or not its message has been received by its neighbors.
-
-## Objectives
-
-The aim of the project is to measure and evaluate the broadcast time for a message in the
-entire floorplan, the percentage of covered users and the number of collisions.
+The aim of the project is to measure and evaluate the broadcast time for a message in a 2D floorplan with N users, the percentage of covered users and the number of collisions. The network has been simulated with `OMNeT++`.
 
 The evaluation is made with the following parameters:
 * Radius R
@@ -90,3 +75,9 @@ the number of users and all other possible parameters
 For model verification and analysis go to the documentation.
 
 WARNING: The 2kr analysis is not reliable because the procedure used is not the standard one. 
+
+## Authors
+
+* Biagio Cornacchia, b.cornacchia@studenti.unipi.it
+* Gianluca Gemini, gianlucagemini98@gmail.com
+* Matteo Abaterusso, m.abaterusso@studenti.unipi.it
